@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 90%;
+        }
+        h1 {
+            color: #e63946;
+            font-size: 2em;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        h1::after {
+            content: '❤️';
+            position: absolute;
+            top: 0;
+            right: -25px;
+            animation: float 1s infinite alternate;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 2em;
+            animation: floatUp 3s infinite;
+        }
+        @keyframes float {
+            to {
+                transform: translateY(-10px);
+            }
+        }
+        @keyframes floatUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) scale(0.5);
+            }
+        }
+        .spotify-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #1DB954;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+        }
+        .spotify-link:hover {
+            background: #1aa34a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Minha Lista 💕</h1>
+        <ul>
+            <li>Olhar</li>
+            <li>Ficar tímida quando faço algo ou carinho em você</li>
+            <li>Fica bêbada com um copo de vinho</li>
+            <li>Me querer 24 hrs por dia</li>
+            <li>Seu sorriso quando quer transar ou falar putaria</li>
+            <li>Fica de birra quando não faço o que você quer (um dia nós saímos na porrada)</li>
+            <li>Sumir do nada e aparecer falando que tava dormindo</li>
+        </ul>
+        <a href="https://open.spotify.com/intl-pt/track/3kGLn0fgxyVxLqW5Vv9B8U?si=7c103044d91e4839" class="spotify-link" target="_blank">
+            Ouça uma música no Spotify 🎵
+        </a>
+    </div>
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = ${Math.random() * 100}%;
+            heart.style.animationDuration = ${Math.random() * 2 + 2}s;
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 3000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
+
+</body>
+</html>
